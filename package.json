@@ -1,0 +1,22 @@
+{
+  "name": "skinbook",
+  "version": "1.0.0",
+  "description": "Your Personal & Social Skincare Knowledge Base",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}

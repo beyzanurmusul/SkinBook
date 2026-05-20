@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skinbook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="container">
+                <h1>🧴 Skinbook</h1>
+                <p class="tagline">Learn ingredients • Share routines • Play • Level up!</p>
+                <nav class="nav">
+                    <button id="navHome" class="nav-btn active" data-view="home">Home</button>
+                    <button id="navRoutines" class="nav-btn" data-view="routines">Routines</button>
+                    <button id="navCreate" class="nav-btn" data-view="create">Create</button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="container">
+                <div id="view-home" class="view active">
+                    <section class="hero">
+                        <h2>Welcome to Skinbook</h2>
+                        <p>Your personal & social skincare knowledge base</p>
+                        <button class="btn btn-primary" id="startBtn">Get Started</button>
+                    </section>
+                </div>
+
+                <div id="view-routines" class="view">
+                    <h2>Skincare Routines</h2>
+                    <div class="filters">
+                        <select id="skinTypeFilter" style="padding: 10px 15px; border: 1px solid #E0E0E0; border-radius: 5px; font-size: 0.95em;">
+                            <option value="">All Skin Types</option>
+                            <option value="oily">Oily</option>
+                            <option value="dry">Dry</option>
+                            <option value="combination">Combination</option>
+                            <option value="sensitive">Sensitive</option>
+                            <option value="normal">Normal</option>
+                        </select>
+                        <input type="text" id="searchInput" placeholder="Search routines..." style="padding: 10px 15px; border: 1px solid #E0E0E0; border-radius: 5px; font-size: 0.95em; flex-grow: 1;">
+                    </div>
+                    <div id="routinesList" class="routines-list">
+                        <p>Loading routines...</p>
+                    </div>
+                </div>
+
+                <div id="view-create" class="view">
+                    <h2>Create New Routine</h2>
+                    <form id="routineForm" style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <input type="text" id="routineName" placeholder="Routine Name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #E0E0E0; border-radius: 5px; font-family: inherit; font-size: 1em;">
+                        
+                        <select id="skinType" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #E0E0E0; border-radius: 5px; font-family: inherit; font-size: 1em;">
+                            <option value="">Select Skin Type</option>
+                            <option value="oily">Oily</option>
+                            <option value="dry">Dry</option>
+                            <option value="combination">Combination</option>
+                            <option value="sensitive">Sensitive</option>
+                            <option value="normal">Normal</option>
+                        </select>
+                        
+                        <input type="text" id="category" placeholder="Category (morning, night)" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #E0E0E0; border-radius: 5px; font-family: inherit; font-size: 1em;">
+                        
+                        <input type="number" id="difficulty" min="1" max="5" value="3" placeholder="Difficulty" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #E0E0E0; border-radius: 5px; font-family: inherit; font-size: 1em;">
+                        
+                        <textarea id="description" placeholder="Description" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #E0E0E0; border-radius: 5px; font-family: inherit; font-size: 1em; min-height: 80px;"></textarea>
+                        
+                        <textarea id="steps" placeholder="Steps" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #E0E0E0; border-radius: 5px; font-family: inherit; font-size: 1em; min-height: 100px;"></textarea>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px 24px; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; font-weight: 600; background: #FF6B9D; color: white;">Create Routine</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <div id="toast" class="toast hidden"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

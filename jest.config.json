@@ -1,0 +1,14 @@
+{
+  "testEnvironment": "node",
+  "collectCoverageFrom": [
+    "src/**/*.js",
+    "!src/**/*.test.js"
+  ],
+  "coveragePathIgnorePatterns": [
+    "node_modules/"
+  ],
+  "testMatch": [
+    "**/?(*.)+(spec|test).js"
+  ],
+  "verbose": true
+}
